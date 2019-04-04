@@ -116,7 +116,7 @@ function spawnWasmPack({
 function runProcess(bin, args, options) {
   return new Promise((resolve, reject) => {
         
-    // console.warn("spawing process:", bin, args, options);
+    console.warn("spawing process:", bin, args, options);
     const p = spawn(bin, args, options);
     // const p = spawn(bin, args, options);
 
