@@ -117,8 +117,8 @@ function runProcess(bin, args, options) {
   return new Promise((resolve, reject) => {
         
     console.warn("spawing process:", bin, args, options);
+    spawn("wasm-pack", {stdio: [process.stdin, process.stdout, process.stderr]});
     const p = spawn(bin, args, options);
-    // const p = spawn(bin, args, options);
 
     let stdout = '';
     let stderr = '';
