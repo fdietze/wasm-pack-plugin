@@ -106,7 +106,7 @@ function spawnWasmPack({
   ];
 
   const options = {
-    cwd: undefined,
+    cwd: cwd,
     env: process.env
   };
 
