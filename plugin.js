@@ -106,7 +106,8 @@ function spawnWasmPack({
   ];
 
   const options = {
-    cwd
+    cwd: undefined,
+    env: process.env
   };
 
   return runProcess(bin, args, options);
@@ -114,7 +115,9 @@ function spawnWasmPack({
 
 function runProcess(bin, args, options) {
   return new Promise((resolve, reject) => {
+        
     const p = spawn(bin, args, options);
+    // const p = spawn(bin, args, options);
 
     let stdout = '';
     let stderr = '';
