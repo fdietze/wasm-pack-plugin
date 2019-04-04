@@ -132,6 +132,8 @@ function runProcess(bin, args, options) {
     });
 
     p.on('close', code => {
+    console.warn("stdout: ",stdout)
+    console.warn("stderr: ",stderr)
       if (code === 0) {
         resolve(stdout);
       } else {
